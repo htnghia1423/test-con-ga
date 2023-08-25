@@ -3,13 +3,12 @@
 #################################
 ## Super Linter GitHub Actions ##
 #################################
-name: Lint Code Base
-
+name: Haha
 on: push
 
 jobs:
   build:
-    name: Lint Code Base
+    name: Hha
     runs-on: ubuntu-latest
 
     steps:
@@ -23,4 +22,3 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          java-package: jdk+fx
