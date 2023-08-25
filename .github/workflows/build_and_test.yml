@@ -10,6 +10,10 @@ jobs:
   build:
     name: Hha
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dis: ['zulu', 'liberica']
+        pac: ['jdk+fx', 'jre+fx']
 
     steps:
       - name: Checkout Code
@@ -20,6 +24,6 @@ jobs:
       - name: Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
+          distribution: ${{ matrix.dis }}
           java-version: '17'
-          java-package: jre+fx
+          java-package: ${{ matrix.pac }}
